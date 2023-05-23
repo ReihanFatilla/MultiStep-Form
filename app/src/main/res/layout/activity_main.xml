@@ -45,8 +45,7 @@
             android:fontFamily="@font/inter_medium"
             android:text="2"
             android:textColor="@color/black"
-            android:textSize="14sp"
-            android:textStyle="normal" />
+            android:textSize="14sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -62,7 +61,6 @@
             android:text="dari "
             android:textColor="@color/gray"
             android:textSize="14sp"
-            android:textStyle="normal"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -72,8 +70,7 @@
             android:fontFamily="@font/inter_medium"
             android:text="17"
             android:textColor="@color/gray"
-            android:textSize="16sp"
-            android:textStyle="normal" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
