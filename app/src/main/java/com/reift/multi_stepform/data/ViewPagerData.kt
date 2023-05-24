@@ -21,7 +21,7 @@ fun getFormViewPagerData(): List<Form> {
             "Email",
             "Masukkan Email Anda",
             FormType.INPUT,
-            inputHint = "Nama Bisnis Anda"
+            inputHint = "Email Anda"
         ),
         Form(
             "Nama Bisnis",

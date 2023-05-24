@@ -85,7 +85,7 @@
 
     <View
         android:id="@+id/progress_line_active"
-        android:layout_width="50dp"
+        android:layout_width="match_parent"
         android:layout_height="4dp"
         android:background="@drawable/progress_line"
         android:backgroundTint="@android:color/holo_blue_dark"

@@ -1,6 +1,7 @@
 package com.reift.multi_stepform.fragment
 
 import android.os.Bundle
+import android.text.InputType
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import com.reift.multi_stepform.adapter.FormAdapter
 import com.reift.multi_stepform.databinding.ActivityMainBinding
 import com.reift.multi_stepform.databinding.FragmentInputFormBinding
 import com.reift.multi_stepform.model.Form
+import com.reift.multi_stepform.model.FormType
 
 class InputFragment : Fragment() {
 
@@ -36,6 +38,11 @@ class InputFragment : Fragment() {
             with(form){
                 tvFormTitle.text = title
                 tvFormDescription.text = desc
+
+                if(formType == FormType.FIELD){
+                    etFormInput.inputType = InputType.TYPE_TEXT_FLAG_MULTI_LINE
+                    etFormInput.setLines(10)
+                }
 
                 etFormInput.hint = inputHint
             }

@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/bg_form_edit_text.xml" value="0.107" />
+        <entry key="app/src/main/res/drawable/custom_checkbox.xml" value="0.107" />
         <entry key="app/src/main/res/drawable/progress_line.xml" value="0.107" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.26587079987121426" />
         <entry key="app/src/main/res/layout/fragment_checkbox_form.xml" value="0.28125" />
+        <entry key="app/src/main/res/layout/fragment_input_form.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/fragment_one_line_form.xml" value="0.28125" />
         <entry key="app/src/main/res/layout/fragment_rate_form.xml" value="0.28125" />
         <entry key="app/src/main/res/layout/item_checkbox_form.xml" value="0.28125" />
