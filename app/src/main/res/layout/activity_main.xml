@@ -94,6 +94,7 @@
         app:layout_constraintTop_toTopOf="@id/progress_line" />
 
     <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_multi_step_form"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="-28dp"
