@@ -2,6 +2,7 @@ package com.reift.multi_stepform
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.reift.multi_stepform.adapter.FormAdapter
 import com.reift.multi_stepform.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUpViewPager() {
         binding.vpMultiStepForm.apply {
-
+            adapter = FormAdapter(this@MainActivity)
         }
     }
 }
