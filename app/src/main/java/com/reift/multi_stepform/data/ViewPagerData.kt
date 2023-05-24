@@ -79,5 +79,24 @@ fun getFormViewPagerData(): List<Form> {
             FormType.FIELD,
             inputHint = "Tuliskan target dan rencana bisnis anda setelah melalui proses optimalisasi channel digital"
         ),
+        Form(
+            "Budget untuk optimalisasi channel anda",
+            "Pilih jumlah budget yang sudah disiapkan",
+            FormType.RADIO,
+            listRadio = listOf("Rp. 0", "Rp. 500.000 - Rp. 1.000.000", "Rp. 1.000.000 - Rp. 2.500.000", "Rp. 2.500.000 - Rp. 5.000.000", "Rp. 5.000.000+",)
+        ),
+        Form(
+            "% Kenaikan omset yang diharapkan",
+            "Pilih jumlah kenaikan omset yang Anda harapkan",
+            FormType.RADIOINPUT,
+            listRadio = listOf("10%", "25%", "50%", "75%", "100%")
+        ),
+        Form(
+            "Apakah bersedia untuk optimalisasi",
+            "Pilih kersediaan untuk proses optimalisasi channel digital",
+            FormType.RADIO,
+            listRadio = listOf("Ya", "Tidak")
+        ),
+
     )
 }

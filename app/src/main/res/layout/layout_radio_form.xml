@@ -3,30 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     app:strokeColor="@color/gray"
     app:cardCornerRadius="12dp"
     app:strokeWidth="2dp">
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:gravity="center"
+        android:orientation="vertical"
         android:clipToPadding="false"
         android:paddingHorizontal="24dp">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_checkbox"
+        <RadioGroup
+            android:id="@+id/rg_form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:itemCount="10"
-            android:layout_marginStart="-12dp"
-            android:layout_marginEnd="-12dp"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            tools:listitem="@layout/item_checkbox_form" />
+            android:layout_marginStart="-2dp"
+            android:layout_marginEnd="-2dp"
+            android:orientation="vertical" />
 
         <EditText
             android:id="@+id/et_other_form"
@@ -43,6 +38,6 @@
             android:layout_marginTop="6dp"
             android:textSize="12sp" />
 
-    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </com.google.android.material.card.MaterialCardView>

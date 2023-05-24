@@ -4,6 +4,8 @@ enum class FormType() {
     INPUT,
     FIELD,
     CHECKBOX,
-    RATE,
     CHECKBOXINPUT,
+    RADIO,
+    RADIOINPUT,
+    RATE
 }

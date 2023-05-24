@@ -5,14 +5,12 @@ import android.text.InputType
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioButton
 import androidx.fragment.app.Fragment
 import com.reift.multi_stepform.R
 import com.reift.multi_stepform.adapter.CheckBoxAdapter
 import com.reift.multi_stepform.adapter.FormAdapter
-import com.reift.multi_stepform.databinding.FragmentFormBinding
-import com.reift.multi_stepform.databinding.LayoutCheckboxFormBinding
-import com.reift.multi_stepform.databinding.LayoutInputFormBinding
-import com.reift.multi_stepform.databinding.LayoutRateFormBinding
+import com.reift.multi_stepform.databinding.*
 import com.reift.multi_stepform.model.Form
 import com.reift.multi_stepform.model.FormType
 
@@ -48,6 +46,8 @@ class FormFragment : Fragment() {
                 FormType.CHECKBOX -> R.layout.layout_checkbox_form
                 FormType.CHECKBOXINPUT -> R.layout.layout_checkbox_form
                 FormType.RATE -> R.layout.layout_rate_form
+                FormType.RADIO -> R.layout.layout_radio_form
+                FormType.RADIOINPUT -> R.layout.layout_radio_form
             }
         }
 
@@ -73,6 +73,32 @@ class FormFragment : Fragment() {
             FormType.RATE -> {
                 val binding = LayoutRateFormBinding.bind(inflatedView)
                 setUpRateForm(binding)
+            }
+            FormType.RADIO -> {
+                val binding = LayoutRadioFormBinding.bind(inflatedView)
+                setUpRadioForm(binding)
+            }
+            FormType.RADIOINPUT -> {
+                val binding = LayoutRadioFormBinding.bind(inflatedView)
+                setUpRadioForm(binding)
+            }
+        }
+    }
+
+    private fun setUpRadioForm(binding: LayoutRadioFormBinding) {
+        binding.apply {
+            with(form){
+                if(formType == FormType.RADIOINPUT){
+                    etOtherForm.visibility = View.GONE
+                }
+
+                listRadio?.forEach {
+                    val radioButton = RadioButton(context)
+                    radioButton.text = it
+                    radioButton.id = View.generateViewId()
+                    rgForm.addView(radioButton)
+                }
+
             }
         }
     }
