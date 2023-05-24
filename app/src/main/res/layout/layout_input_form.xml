@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:strokeColor="@color/gray"
+    app:cardCornerRadius="12dp"
+    app:strokeWidth="2dp">
+
+    <EditText
+        android:id="@+id/et_form_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_form_edit_text"
+        android:fontFamily="@font/inter_regular"
+        android:layout_marginHorizontal="24dp"
+        android:hint="Nama lengkap Anda"
+        android:scrollHorizontally="false"
+        android:inputType="textMultiLine"
+        android:padding="16dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="10dp"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+
+</com.google.android.material.card.MaterialCardView>
