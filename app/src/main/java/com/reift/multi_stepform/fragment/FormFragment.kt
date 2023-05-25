@@ -1,11 +1,13 @@
 package com.reift.multi_stepform.fragment
 
+import android.os.Build
 import android.os.Bundle
 import android.text.InputType
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
+import android.widget.RadioGroup
 import androidx.fragment.app.Fragment
 import com.reift.multi_stepform.R
 import com.reift.multi_stepform.adapter.CheckBoxAdapter
@@ -13,6 +15,7 @@ import com.reift.multi_stepform.adapter.FormAdapter
 import com.reift.multi_stepform.databinding.*
 import com.reift.multi_stepform.model.Form
 import com.reift.multi_stepform.model.FormType
+
 
 class FormFragment : Fragment() {
 
@@ -88,7 +91,7 @@ class FormFragment : Fragment() {
     private fun setUpRadioForm(binding: LayoutRadioFormBinding) {
         binding.apply {
             with(form){
-                if(formType == FormType.RADIOINPUT){
+                if(formType == FormType.RADIO){
                     etOtherForm.visibility = View.GONE
                 }
 
@@ -96,6 +99,15 @@ class FormFragment : Fragment() {
                     val radioButton = RadioButton(context)
                     radioButton.text = it
                     radioButton.id = View.generateViewId()
+                    radioButton.setPadding(24, 0, 0, 0)
+                    val params = RadioGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT)
+                    params.setMargins(0, 28, 0, 28)
+                    radioButton.layoutParams = params
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        radioButton.typeface = resources.getFont(R.font.inter_regular)
+                    }
+                    radioButton.setButtonDrawable(R.drawable.custom_radio_button)
                     rgForm.addView(radioButton)
                 }
 
